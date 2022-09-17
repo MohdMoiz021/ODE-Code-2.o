@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@900&display=swap" rel="stylesheet">
+  
+  <title>Group 60 | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!-- main section -->
+
+<section class="main-section">
+
+  <div class="card">
+    <div class="card-top-img">
+      <div class="container">
+       
+      </div>
+    </div>
+
+    <div class="card-text">
+
+      <h1>Order Summary</h1>
+
+      <div class="text">
+        Pay You Bill
+      </div>
+
+      <div class="price-div">
+
+        
+
+          <div>
+            <b>Total Amount:  </b>
+              5999
+          </div>
+        </div>
+      
+        <a href="#">
+          Change
+        </a>
+      </div>
+
+
+      <form>
+        <button id="rzp-button1">
+          <i class="fas fa-donate"></i>&nbsp;&nbsp;Complete the Payment.
+
+        </button>
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        <script>
+          var options = {
+            key: "rzp_test_aIfnpuWEudWnID", // Enter the Key ID generated from the Dashboard
+            amount: "599900", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            currency: "INR",
+            name: "MI Store And Services",
+            description: "Pay Your Amount",
+            handler: function (response) {
+              if (
+                typeof response.razorpay_payment_id == "undefined" ||
+                response.razorpay_payment_id < 1
+              ) {
+                swal({
+                  title: "Please try again later!",
+                  icon: "error",
+                  button: "Close",
+                });
+              } else {
+                swal({
+                  title: "Thank You!",
+                  icon: "success",
+                  button: "Close",
+                });
+              }
+            },
+            theme: {
+              color: "#3399cc",
+            },
+          };
+          var rzp1 = new Razorpay(options);
+          document.getElementById("rzp-button1").onclick = function (
+            e
+          ) {
+            rzp1.open();
+            e.preventDefault();
+          };
+        </script>
+      </form>
+    </div>
+  </div>
+
+
+      <a class="down-link" href="#">
+        Cancel Order
+      </a>
+    </div>
+  </div>
+
+  
+</section> 
+</body>
+</html>

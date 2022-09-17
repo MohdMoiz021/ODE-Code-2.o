@@ -1,0 +1,194 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-section{
+    background-image: url("../images/pattern-background-desktop.svg");
+    background-color:rgb(255, 103, 0);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 200vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.card{
+    background-color: #fff;
+    width: 450px;
+    border-radius: 20px;
+    text-align: center;
+    height: 65vh;
+    max-height: 600px;
+    margin: auto;
+    color: hsl(224, 23%, 56%);
+}
+
+.card:hover{
+    box-shadow: 1px  1px 10px  hsl(224, 23%, 55%);
+}
+
+h1,b{
+    color: hsl(223, 47%, 23%);
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.card-top-img{
+    width: 100%;
+}
+
+.card-top-img img{
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-text h1{
+    margin-top: 20px;
+}
+
+.card-text .text{
+   margin: 15px 10%;
+}
+
+.card-text .down-link{
+    text-decoration: none;
+    font-weight: bold;
+    color: hsl(217, 4%, 39%);
+    /* font-family: 'Red Hat Display', sans-serif; */
+}
+
+.card-text a:hover{
+    color: hsl(223, 47%, 23%);  
+}
+
+.price-div{
+    /* border: solid; */
+    /* background-color: hsl(224, 23%, 55%); */
+    background-color:hsl(225, 100%, 98%);
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.price-div a{
+    text-decoration: underline;
+    color: hsl(245, 75%, 52%);
+    font-weight: bolder;
+}
+
+.price-div a:hover{
+    text-decoration: none;
+    color: hsl(245, 75%, 52%);
+}
+
+.price-div .left{
+    /* margin: auto; */
+    /* border: solid; */
+    align-self: center;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    width: 60%;
+    justify-content: space-around;
+}
+
+.btn{
+    /* display: block; */
+    background-color: hsl(245, 75%, 52%);
+    width: 80%;
+    height: 80px ;
+    border:none;
+    border-radius: 10px;
+    margin:  20px;
+    color: white;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: rgb(255, 103, 0);
+
+}
+
+.down-link{
+    font-size: 14px;
+}
+.icon{
+    width: 10%;
+height: -10vh;
+}
+
+#rzp-button1 {
+    background-color: hsl(245, 75%, 52%);
+    width: 80%;
+    height: 80px ;
+    border:none;
+    border-radius: 10px;
+    margin:  20px;
+    color: white;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+#rzp-button1:hover {
+    background-color:rgb(255, 103, 0) ;
+}
+
+#button {
+    display: inline-block;
+    background-color: #530ee7;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: rgb(246, 110, 7);
+}
+
+#button:active {
+    background-color: #555;
+}
+
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+@media only screen and (min-width:1440px){
+
+}
+@media only screen and (max-width:375px){
+    
+}

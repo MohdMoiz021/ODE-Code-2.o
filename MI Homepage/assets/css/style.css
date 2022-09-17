@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar */
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-nav>li {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Image Navbar */
+.image {
+    width: 25%;
+}
+
+/* Overlay CSS */
+.overlay {
+    color: #fff;
+    position: absolute;
+    z-index: -12;
+    left: 0;
+    width: 100%;
+}
+
+/* Carousel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 30px;
+    height: 30px;
+    background-color: #fc450d;
+    border-radius: 50%;
+    bottom: 20px !important;
+    top: auto;
+    opacity: .8;
+}
+
+.carousel-control-prev {
+    left: 30px;
+}
+
+.carousel-control-next {
+    right: 30px;
+}
+
+/* Footer */
+.bg-footer {
+    background-color: #33383c;
+    padding: 50px 0 30px;
+}
+
+.footer-heading {
+    letter-spacing: 2px;
+}
+
+.footer-link a {
+    color: #acacac;
+    line-height: 40px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.footer-link a:hover {
+    color: #1bbc9b;
+}
+
+.contact-info {
+    color: #acacac;
+    font-size: 14px;
+}
+
+.footer-social-icon {
+    font-size: 15px;
+    height: 34px;
+    width: 34px;
+    line-height: 34px;
+    border-radius: 3px;
+    text-align: center;
+    display: inline-block;
+}
+
+.facebook {
+    background-color: #4e71a8;
+    color: #ffffff;
+}
+
+.twitter {
+    background-color: #55acee;
+    color: #ffffff;
+}
+
+.google {
+    background-color: #d6492f;
+    color: #ffffff;
+}
+
+.apple {
+    background-color: #424041;
+    color: #ffffff;
+}
+
+.footer-alt {
+    color: #acacac;
+}
+
+.footer-heading {
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-heading:after {
+    content: '';
+    width: 25px;
+    border-bottom: 1px solid #FFF;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    border-bottom: 1px solid #1bbc9b;
+}
+
+/* Links */
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+    padding-left: 30px;
+}
+
+.logo {
+    width: 65px;
+    background-color: #FF6900;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all .2s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.hovertext {
+    position: relative;
+    cursor: pointer;
+}
+
+.hovertext:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: max-content;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 5px;
+    transition: opacity 1s ease-in-out;
+
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 110%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.hovertext:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.store {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.store-content-mobile {
+    display: none;
+}
+
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #302a32 #5e5e5e;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #5e5e5e;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #302a32;
+    border-radius: 10px;
+    border: 0px solid #ffffff;
+}
+
+/* Responsive */
+@media only screen and (max-width: 900px) {
+    .store-content {
+        display: none;
+    }
+
+    .store-content-mobile {
+        display: block;
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    .flex-mobile {
+        display: flex;
+        gap: 30px;
+    }
+}
+input{
+width: 100%;
+margin-bottom: 20px;
+padding: 12px;
+border: 1px solid rgb(225, 208, 199);
+border-radius: 10px;
+}
+
+.submit{
+    
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+}
